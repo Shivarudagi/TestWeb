@@ -1,10 +1,7 @@
 - name: for weblogic
   hosts: all
   tasks:
-  - name: Change directory
-    stat:
-    path: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
-  - name: Execute the script
-    command: sh nohup ./startWeblogic.sh &
-  - name: display nohup.out file
-    command: sh tail -f nohup.out
+   command:    
+   - "/bin/sh"    
+   - "-c"   
+   - "/WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin//startWebLogic.sh & tail -f /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/nohup.out"
