@@ -1,8 +1,6 @@
 - name: for weblogic
   hosts: all
-
-  args:
-    chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
+  chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
 
 - name: Execute the script
   command: sh nohup ./startWeblogic.sh &
