@@ -3,4 +3,4 @@
   command:
    -"/bin/sh"    
    -"-c" 
-   -"/WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/startWebLogic.sh & tail -f /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/nohup.out"
+   -"/WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/startWebLogic.sh & tail -f /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/servers/AdminServer/logs/AdminServer.log"
