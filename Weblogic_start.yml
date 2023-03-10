@@ -1,4 +1,4 @@
-- name: weblogic start
+- name: weblogic_start
   hosts: all 
   command:
    -"/bin/sh"    
