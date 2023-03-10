@@ -1,6 +1,5 @@
 - name: for weblogic
   remote_user: root
-  sudo: yes
   hosts: all
   tasks:
     - name: Execute the script
