@@ -1,7 +1,7 @@
 - name: for weblogic
-  hosts: all
-  user: oracle
+  remote_user: root
   sudo: yes
+  hosts: all
   tasks:
     - name: Execute the script
       command: sh /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/startWebLogic.sh
