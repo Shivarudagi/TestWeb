@@ -1,7 +1,6 @@
-- name: for weblogic
+- name: for weblogic stop
   remote_user: root
   hosts: all
   tasks:
     - name: Stop Weblogic
       command: sh /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/stopWebLogic.sh
-    - name: Weblogic Server has been stopped
