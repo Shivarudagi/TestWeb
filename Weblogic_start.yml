@@ -1,9 +1,7 @@
--
- name: for weblogic
- hosts: all
+- name: for weblogic
+  hosts: all
 
--
-  name: go to weblogic bin path
+- name: go to weblogic bin path
   command: cd /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
 
 - name: Execute the script
