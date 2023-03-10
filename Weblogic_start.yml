@@ -1,3 +1,4 @@
+---
 - name: for weblogic
   hosts: all
   tasks:
