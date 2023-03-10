@@ -1,9 +1,1 @@
 ---
-- name: Creates directory
-  file:
-    path: /OHS/Test
-    state: directory
-    owner: oracle
-    group: oracle
-    mode: 0777
-    recurse: yes
