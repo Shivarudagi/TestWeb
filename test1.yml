@@ -1,5 +1,6 @@
 ---
-- name: Creates directory
+  - name: Creates directory
+  hosts: all
   file:
     path: /OHS/Test
     state: directory
