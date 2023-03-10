@@ -1,9 +1,12 @@
----
-- name: Creates directory
-  file:
-    path: /OHS/Test
-    state: directory
-    owner: oracle
-    group: oracle
-    mode: 0777
-    recurse: yes
+- name: checking service status
+  hosts: all
+  tasks:
+  - name: checking service status
+    command: systemctl status "{{ item }}"
+    with_items:
+    - firewalld
+    register: result
+    ignore_errors: yes
+  - name: showing report
+    debug:
+     var: result
