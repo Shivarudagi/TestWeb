@@ -3,4 +3,5 @@
   hosts: all
   tasks:
     - name: Execute the script
-      command: sh /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/startWebLogic.sh
+      command: sh nohup /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/startWebLogic.sh &
+      command: sh tail -f /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/nohup.out
