@@ -1,0 +1,12 @@
+---
+- name: startWebLogic
+  hosts: all
+  gather_facts: true
+  become: yes
+  become_user: root
+  
+  tasks:
+  - name: excute scrpit startWebLogic
+    command: sh nohup ./startWebLogic.sh &
+    args: 
+       chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
