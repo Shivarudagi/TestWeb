@@ -1,6 +1,14 @@
-- name: for weblogic stop
-  remote_user: root
+---
+- name: startWebLogic
   hosts: all
+  gather_facts: true
+  become: yes
+  become_user: root
+  
   tasks:
-    - name: Stop Weblogic
-      command: sh /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin/stopWebLogic.sh
+  - name: excute scrpit startWebLogic
+#    command: sh nohup startWebLogic.sh &
+    command: sh stopWeblogic_script.sh
+    args: 
+ #      chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
+        chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/script
