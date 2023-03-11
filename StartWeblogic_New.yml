@@ -7,6 +7,8 @@
   
   tasks:
   - name: excute scrpit startWebLogic
-    command: sh startWeblogic_script.sh
+    command: sh nohup startWebLogic.sh &
+#    command: sh startWeblogic_script.sh
     args: 
-       chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/script
+       chdir: /WLS_DOMAIN/PROD/Oracle/Middleware/Oracle_Home/user_projects/domains/PROD/bin
+      
